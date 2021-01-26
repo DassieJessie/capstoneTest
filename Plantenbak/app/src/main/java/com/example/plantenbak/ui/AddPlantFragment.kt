@@ -1,13 +1,14 @@
 package com.example.plantenbak.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.plantenbak.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -24,6 +25,13 @@ class AddPlantFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        var fabS = view.findViewById(R.id.fabSave) as FloatingActionButton
+
+        fabS.setOnClickListener{
+            findNavController().popBackStack()
+        }
+
 
     }
 }

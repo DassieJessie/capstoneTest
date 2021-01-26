@@ -91,16 +91,21 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hvl_water"/>
 
-                <RadioButton
-                    android:id="@+id/radioWater1x"
-                    android:layout_width="wrap_content"
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/eenx_water" />
-                <RadioButton
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/radioWater1x"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eenx_water" />
+                    <RadioButton
                     android:id="@+id/radioWater2x"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tweex_water"/>
+                </RadioGroup>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -116,14 +121,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/notificaties"
-                        app:layout_constraintStart_toStartOf="parent"/>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <Switch
                         android:id="@+id/switchNotificatie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Switch"
-                        app:layout_constraintEnd_toEndOf="parent"/>
+                        android:text="@string/water_geven"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -140,21 +149,27 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hvl_zonlicht"/>
 
-                <RadioButton
-                    android:id="@+id/radioZonWeinig"
-                    android:layout_width="wrap_content"
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/weinig" />
-                <RadioButton
-                    android:id="@+id/radioZonGemiddeld"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/gemiddeld"/>
-                <RadioButton
-                    android:id="@+id/radioZonVeel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/veel"/>
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/radioZonWeinig"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weinig" />
+                    <RadioButton
+                        android:id="@+id/radioZonGemiddeld"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gemiddeld"/>
+                    <RadioButton
+                        android:id="@+id/radioZonVeel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/veel"/>
+                </RadioGroup>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -168,8 +183,6 @@
                     android:hint="@string/hint_notitie" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-
         </LinearLayout>
 
 
@@ -178,7 +191,7 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabYeet"
+        android:id="@+id/fabSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
@@ -186,6 +199,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_save" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
