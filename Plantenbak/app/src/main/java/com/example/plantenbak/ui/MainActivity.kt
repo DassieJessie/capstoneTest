@@ -6,13 +6,17 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.plantenbak.R
+import com.example.plantenbak.viewmodel.PlantViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    private val viewModel: PlantViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +54,10 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.btnBin -> true
+            R.id.btnBin -> {
+                viewModel.deleteAllPlants()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 
