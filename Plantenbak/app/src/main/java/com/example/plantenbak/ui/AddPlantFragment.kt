@@ -10,6 +10,7 @@ import com.example.plantenbak.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
+
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
@@ -31,6 +32,7 @@ class AddPlantFragment : Fragment() {
         fabS.setOnClickListener{
             findNavController().popBackStack()
         }
+
 
 
     }
