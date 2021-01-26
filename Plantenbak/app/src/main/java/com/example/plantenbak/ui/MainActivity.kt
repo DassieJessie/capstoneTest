@@ -1,11 +1,15 @@
 package com.example.plantenbak.ui
 
+import android.app.Dialog
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.Window
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -55,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.btnBin -> {
-                viewModel.deleteAllPlants()
+                showDialog()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -74,4 +78,21 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun showDialog(){
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.custom_dialog)
+        val yesBtn = dialog.findViewById(R.id.btnDelete) as Button
+        val noBtn = dialog.findViewById(R.id.btnCancel) as TextView
+        yesBtn.setOnClickListener {
+            viewModel.deleteAllPlants()
+            dialog.dismiss()
+        }
+        noBtn.setOnClickListener { dialog.dismiss() }
+        dialog.show()
+
+    }
+
 }

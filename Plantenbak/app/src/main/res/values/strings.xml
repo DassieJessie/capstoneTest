@@ -37,6 +37,12 @@
     <string name="datum_plant">%s %s %s</string>
     <string name="datum_plant_text">Planted: </string>
 
+    <!-- Dialog -->
+    <string name="title_dialog">Verwijder Planten?</string>
+    <string name="info_dialog">Alle planten worden verwijderd</string>
+    <string name="cancel">Terug</string>
+    <string name="delete">Verwijderen</string>
+
 
 
 
