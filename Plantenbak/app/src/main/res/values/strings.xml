@@ -3,6 +3,40 @@
     <string name="action_settings">Settings</string>
     <string name="btn_bin_title">Delete Games</string>
 
-    <!-- Strings used for fragments for navigation -->
+    <!-- Strings used for add plant fragment -->
+    <string name="hint_naam">Naam</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+
+    <string name="hvl_water">Hoeveel water heeft de plant nodig?</string>
+    <string name="eenx_water">1x water per week</string>
+    <string name="tweex_water">2x water per week</string>
+
+    <string name="notificaties">Stuur mij notificaties</string>
+
+    <string name="hvl_zonlicht">Hoeveel zonlicht heeft de plant nodig?</string>
+    <string name="weinig">Weinig</string>
+    <string name="gemiddeld">Gemiddeld</string>
+    <string name="veel">Veel</string>
+
+    <string name="hint_notitie">Notitie</string>
+
+    <!-- Strings used for item plant -->
+    <string name="title">Title</string>
+    <string name="zonlicht_text">Zon: </string>
+    <string name="zonlicht_hvl">zonlicht</string>
+
+    <string name="water_per_week">water per week</string>
+    <string name="water_text">Water: </string>
+
+    <string name="notitie_text">Notitie</string>
+    <string name="notitie">Empty notitie</string>
+
+    <string name="datum_plant">Planted: \n%s %s %s</string>
+
+
+
+
 
 </resources>
