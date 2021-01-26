@@ -34,7 +34,8 @@
     <string name="notitie_text">Notitie</string>
     <string name="notitie">Empty notitie</string>
 
-    <string name="datum_plant">Planted: \n%s %s %s</string>
+    <string name="datum_plant">%s %s %s</string>
+    <string name="datum_plant_text">Planted: </string>
 
 
 
